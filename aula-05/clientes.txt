@@ -1,0 +1,5 @@
+Vagner	41
+Renata	30
+Marcia	35
+Rogério	50
+Garcia	20
