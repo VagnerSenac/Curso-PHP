@@ -13,8 +13,13 @@
 <?php
 $nome = $_POST["nome"];
 $email = $_POST["email"];
-$arquivo = fopen("estudantes.txt","a+");
-fwrite($arquivo, "\n $nome \t $email");
+if (file_exists("estudantes.txt")) {
+    $arquivo = fopen("estudantes.txt","a+");
+    fwrite($arquivo, "\n$nome \t $email");
+} else {
+    $arquivo = fopen("estudantes.txt","a+");
+    fwrite($arquivo, "$nome \t $email");
+}
 fclose($arquivo);
 
 /*
