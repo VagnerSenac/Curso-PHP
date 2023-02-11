@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11-Fev-2023 às 00:48
+-- Tempo de geração: 11-Fev-2023 às 02:22
 -- Versão do servidor: 10.4.25-MariaDB
 -- versão do PHP: 8.1.10
 
@@ -32,8 +32,8 @@ CREATE TABLE `t_tarefas` (
   `descricao` varchar(1000) NOT NULL,
   `responsavel` varchar(300) NOT NULL,
   `status` varchar(100) NOT NULL,
-  `inicio` date DEFAULT NULL,
-  `fim` date DEFAULT NULL
+  `inicio` varchar(15) NOT NULL,
+  `fim` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -41,8 +41,9 @@ CREATE TABLE `t_tarefas` (
 --
 
 INSERT INTO `t_tarefas` (`id`, `descricao`, `responsavel`, `status`, `inicio`, `fim`) VALUES
-(4, 'Formatar', 'Vagner', 'execucao', NULL, NULL),
-(5, 'Dormir', 'Vagner', 'concluido', NULL, NULL);
+(12, 'escovar dente', 'Vagner', 'execucao', '10/10/2022', '11/10/2022'),
+(13, 'Formatar', 'Vagner Lourenço', 'concluido', '10/10/2022', '1/11/2022'),
+(14, 'limpar a casa', 'Vagner', 'planejado', '10/10/2022', '10/11/2023');
 
 --
 -- Índices para tabelas despejadas
@@ -62,7 +63,7 @@ ALTER TABLE `t_tarefas`
 -- AUTO_INCREMENT de tabela `t_tarefas`
 --
 ALTER TABLE `t_tarefas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
